@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jayveer Vasava | Cyber Security</title>
+<meta name="description" content="Jayveer Vasava, M.Tech Cyber Security student at Parul University. SOC, digital forensics (DFIR) and AI security. Open to remote roles.">
+<meta property="og:title" content="Jayveer Vasava | Cyber Security">
+<meta property="og:description" content="SOC, digital forensics (DFIR) and AI security. M.Tech Cyber Security, Parul University. Open to remote roles.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://jayveerv.github.io/">
+<meta property="og:url" content="https://jayveerv.github.io/">
+<meta property="og:image" content="https://jayveerv.github.io/assets/og-card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jayveer Vasava | Cyber Security">
+<meta name="twitter:description" content="SOC, digital forensics (DFIR) and AI security. Open to remote roles.">
+<meta name="twitter:image" content="https://jayveerv.github.io/assets/og-card.png">
+<meta name="author" content="Jayveer Vasava">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Jayveer Vasava","url":"https://jayveerv.github.io/","image":"https://jayveerv.github.io/assets/photo.jpg","jobTitle":"Cyber Security Analyst","email":"mailto:jayveervasava0710@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Vadodara","addressRegion":"Gujarat","addressCountry":"IN"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Parul University"},"knowsAbout":["Security Operations","Digital Forensics","Incident Response","Network Security","AI Security","OSINT"],"sameAs":["https://www.linkedin.com/in/jayveer-vasava-93779038b/","https://github.com/jayveerv"]}
+</script>
+<meta name="theme-color" content="#0B1424">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1424'/%3E%3Cpath d='M32 10l18 7v13c0 12-8 21-18 24-10-3-18-12-18-24V17z' fill='none' stroke='%234FD1E8' stroke-width='4'/%3E%3Ctext x='32' y='40' font-family='monospace' font-size='18' font-weight='700' fill='%23E6ECF5' text-anchor='middle'%3EJV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B1424;
+  --surface:#111D33;
+  --surface-2:#16243F;
+  --line:#22324F;
+  --text:#E6ECF5;
+  --muted:#93A3BE;
+  --signal:#4FD1E8;
+  --signal-dim:rgba(79,209,232,.12);
+  --amber:#F5B841;
+  --amber-dim:rgba(245,184,65,.12);
+  --green:#5BD69A;
+  --radius-lg:18px;
+  --radius:10px;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--signal);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--signal);color:var(--bg);padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+
+/* faint grid behind the page, like a monitoring console */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:56px 56px;opacity:.18;
+  mask-image:radial-gradient(ellipse at 70% 0%,#000 0%,transparent 65%);
+  -webkit-mask-image:radial-gradient(ellipse at 70% 0%,#000 0%,transparent 65%)}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(11,20,36,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{font-weight:600;color:var(--text);letter-spacing:-.01em;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.brand:hover{text-decoration:none}
+.brand svg{flex:none}
+.nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0}
+.nav ul a{color:var(--muted);font-size:15px;padding:8px 12px;border-radius:8px}
+.nav ul a:hover{color:var(--text);background:var(--surface);text-decoration:none}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:6px 10px;font:inherit;font-size:15px;cursor:pointer}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.id{display:flex;gap:22px;align-items:center;margin-bottom:28px}
+.id img{width:112px;height:112px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:2px solid var(--line);box-shadow:0 0 0 6px var(--signal-dim)}
+.avail{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--green);background:rgba(91,214,154,.1);border:1px solid rgba(91,214,154,.28);padding:5px 12px;border-radius:999px}
+.avail i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(91,214,154,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(91,214,154,.55)}70%{box-shadow:0 0 0 9px rgba(91,214,154,0)}100%{box-shadow:0 0 0 0 rgba(91,214,154,0)}}
+h1{font-size:clamp(40px,6vw,64px);line-height:1.04;letter-spacing:-.03em;margin:0 0 18px;font-weight:700}
+.lede{font-size:20px;color:var(--muted);max-width:34ch;margin:0 0 30px}
+.lede strong{color:var(--text);font-weight:500}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:500;font-size:15.5px;padding:12px 16px;border-radius:var(--radius);border:1px solid var(--line);color:var(--text);background:var(--surface)}
+.btn:hover{text-decoration:none;border-color:var(--signal)}
+.btn.primary{background:var(--signal);color:#06202A;border-color:var(--signal)}
+.btn.primary:hover{background:#7BE0F0}
+.btn svg{width:18px;height:18px}
+
+/* terminal: the one memorable moment */
+.term{background:#08101E;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 30px 80px -30px rgba(79,209,232,.25)}
+.term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface)}
+.term-bar span{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.term-bar span:nth-child(1){background:#F26D6D}.term-bar span:nth-child(2){background:var(--amber)}.term-bar span:nth-child(3){background:var(--green)}
+.term-bar b{margin-left:10px;font:400 13px var(--mono);color:var(--muted)}
+.term pre{margin:0;padding:22px 22px 26px;font:400 14.5px/1.75 var(--mono);color:var(--text);white-space:pre-wrap;word-break:break-word;min-height:330px}
+.term .p{color:var(--signal)}
+.term .c{color:var(--muted)}
+.term .ok{color:var(--green)}
+.term .wa{color:var(--amber)}
+.cursor{display:inline-block;width:9px;height:1.1em;background:var(--signal);vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* sections */
+section{padding:72px 0;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+h2{font-size:clamp(28px,3.6vw,38px);letter-spacing:-.02em;line-height:1.15;margin:0;font-weight:700}
+.sec-head p{margin:0;color:var(--muted);max-width:46ch}
+h3{font-size:20px;line-height:1.3;margin:0 0 6px;font-weight:600;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:56px}
+.about p{margin:0 0 16px;max-width:62ch}
+.facts{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.facts li span:first-child{color:var(--muted)}
+.facts li span:last-child{text-align:right}
+
+/* research */
+.case{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:36px;display:grid;grid-template-columns:1.5fr 1fr;gap:40px;position:relative;overflow:hidden}
+.case::after{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(var(--signal-dim),transparent 70%)}
+.case h3{font-size:clamp(22px,2.6vw,28px);line-height:1.25;margin-bottom:14px}
+.case p{margin:0 0 18px;color:var(--muted);max-width:60ch}
+.badge{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:500;padding:4px 11px;border-radius:999px;border:1px solid}
+.badge.amber{color:var(--amber);background:var(--amber-dim);border-color:rgba(245,184,65,.3)}
+.badge.cyan{color:var(--signal);background:var(--signal-dim);border-color:rgba(79,209,232,.3)}
+.badge.green{color:var(--green);background:rgba(91,214,154,.1);border-color:rgba(91,214,154,.3)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.pipeline{list-style:none;margin:0;padding:0;position:relative;z-index:1}
+.pipeline li{position:relative;padding:0 0 18px 30px;font-size:15.5px}
+.pipeline li::before{content:"";position:absolute;left:5px;top:8px;width:10px;height:10px;border-radius:50%;border:2px solid var(--signal);background:var(--bg)}
+.pipeline li:not(:last-child)::after{content:"";position:absolute;left:10px;top:20px;bottom:-2px;width:2px;background:var(--line)}
+.pipeline b{display:block;font-weight:600}
+.pipeline span{color:var(--muted);font-size:14.5px}
+.pipe-title{font-weight:600;margin:0 0 16px;font-size:15px;color:var(--muted)}
+.small-case{margin-top:20px;background:transparent;border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px 36px;display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap}
+.small-case p{margin:0;color:var(--muted);max-width:64ch}
+.coming{margin-top:20px;padding:20px 24px;border:1px dashed var(--line);border-radius:var(--radius-lg);color:var(--muted);font-size:15.5px}
+
+/* timeline */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.col-title{font-size:15px;color:var(--muted);font-weight:600;margin:0 0 20px}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{position:relative;padding:0 0 28px 28px;border-left:2px solid var(--line);margin-left:6px}
+.tl li:last-child{border-left-color:transparent;padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--signal)}
+.tl .when{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tl h3{font-size:18px;margin:2px 0 2px}
+.tl p{margin:4px 0 0;color:var(--muted);font-size:15.5px}
+.tl .org{color:var(--text);opacity:.85;font-size:16px}
+.linkbtn{background:none;border:0;padding:0;font:inherit;font-size:15px;color:var(--signal);cursor:pointer}
+.linkbtn:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.skill h3{font-size:17px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
+.chips li{font-size:14px;padding:4px 10px;border-radius:7px;background:var(--surface-2);color:#C9D4E6}
+
+/* certifications */
+.featured{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:36px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px;margin-bottom:28px;align-items:start}
+.featured .thumb{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);cursor:zoom-in;background:#fff;padding:0;display:block;width:100%}
+.featured .thumb img{width:100%}
+.featured h3{font-size:24px}
+.courses{list-style:none;margin:18px 0 0;padding:0;columns:2;column-gap:28px}
+.courses li{break-inside:avoid;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px;display:flex;justify-content:space-between;gap:10px}
+.courses a{font-size:13.5px;white-space:nowrap}
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cert{display:flex;flex-direction:column;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;padding:0;color:var(--text);font:inherit;cursor:zoom-in}
+.cert:hover{border-color:var(--signal)}
+.cert img{aspect-ratio:4/3;object-fit:cover;object-position:top;width:100%;background:#fff}
+.cert div{padding:14px 16px 16px}
+.cert b{display:block;font-size:15.5px;font-weight:600;line-height:1.35}
+.cert span{display:block;font-size:13.5px;color:var(--muted);margin-top:4px}
+.cert-note{margin-top:18px;font-size:15px;color:var(--muted)}
+
+/* ctf */
+.ctf{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ctf .cert img{aspect-ratio:16/10}
+
+/* contact */
+.contact{text-align:left;padding:96px 0 80px}
+.contact h2{font-size:clamp(34px,5vw,56px);max-width:16ch}
+.contact p{color:var(--muted);font-size:19px;max-width:52ch;margin:18px 0 32px}
+.mail{font-size:clamp(18px,2.6vw,26px);font-weight:500;display:inline-block;margin-bottom:28px;word-break:break-all}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* lightbox */
+dialog{border:1px solid var(--line);border-radius:var(--radius-lg);padding:0;background:var(--surface);color:var(--text);max-width:min(1100px,94vw);width:auto}
+dialog::backdrop{background:rgba(4,8,16,.82)}
+dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#fff}
+.dlg-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:15px}
+.dlg-bar button{background:var(--surface-2);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+
+/* entrance: the terminal types itself; nothing else animates on load */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;scroll-behavior:auto!important}
+}
+
+/* responsive */
+@media (max-width:980px){
+  .hero .wrap,.about,.case,.cols,.featured{grid-template-columns:1fr}
+  .hero .wrap{gap:40px}
+  .skills{grid-template-columns:1fr 1fr}
+  .cert-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .menu-btn{display:block}
+  .nav ul{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 16px 16px}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:12px}
+  .hero{padding:44px 0 32px}
+  .id img{width:88px;height:88px}
+  .lede{font-size:18px}
+  .term pre{font-size:13px;min-height:300px;padding:18px}
+  section{padding:56px 0}
+  .case{padding:24px}
+  .small-case{padding:22px 24px}
+  .featured{padding:22px}
+  .courses{columns:1}
+  .skills,.ctf{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .cert div{padding:12px}
+  .cert b{font-size:14.5px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Jayveer Vasava, home">
+      <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6l22 8.5v16c0 14.5-9.6 25.4-22 29.5C19.6 55.9 10 45 10 30.5v-16z" fill="none" stroke="#4FD1E8" stroke-width="5"/><path d="M23 32l6 6 12-13" fill="none" stroke="#E6ECF5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Jayveer Vasava
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <ul id="navlinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="id">
+        <img src="assets/photo.jpg" alt="Portrait of Jayveer Vasava" width="112" height="112">
+        <span class="avail"><i></i>Open to remote roles</span>
+      </div>
+      <h1>Jayveer Vasava</h1>
+      <p class="lede">Cyber security engineer in training. I work on <strong>security operations</strong>, <strong>digital forensics</strong> and <strong>AI security</strong>, and I'm doing my M.Tech in Cyber Security at Parul University.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="assets/Jayveer_Vasava_Resume.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+          Resume</a>
+        <a class="btn" href="https://github.com/jayveerv" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+          GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/jayveer-vasava-93779038b/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zm1.8 13.1H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+          LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="term" role="img" aria-label="Terminal summary: Jayveer Vasava, cyber security. Focus: SOC monitoring, digital forensics, AI security. DFIR framework in development, research paper under peer review at IJICS. Open to remote roles.">
+      <div class="term-bar"><span></span><span></span><span></span><b>jayveer@soc-lab: ~</b></div>
+      <pre id="term" aria-hidden="true"></pre>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2 style="margin-bottom:24px">About me</h2>
+      <p>I'm a cyber security student who likes finding out what actually happened. My M.Tech research is a forensics framework that collects evidence from Windows, Linux and cloud systems automatically, then connects the pieces into one investigation timeline.</p>
+      <p>Before cyber security I studied core computer science and interned as a web developer, so I understand how the systems I defend are built. I've completed the Google Cybersecurity Professional Certificate and compete in CTF events to keep my hands-on skills sharp.</p>
+      <p>I'm looking for remote roles as a SOC analyst, security analyst or digital forensics analyst, with teams in India or abroad.</p>
+    </div>
+    <ul class="facts">
+      <li><span>Based in</span><span>Vadodara, Gujarat, India</span></li>
+      <li><span>Studying</span><span>M.Tech Cyber Security, 2025–2027</span></li>
+      <li><span>Looking for</span><span>SOC, Security &amp; DFIR analyst roles</span></li>
+      <li><span>Work mode</span><span>Remote</span></li>
+      <li><span>Languages</span><span>English, Hindi, Gujarati</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Research &amp; projects</h2>
+      <p>New lab projects are added here as I finish them, each with its code on GitHub.</p>
+    </div>
+
+    <article class="case">
+      <div style="position:relative;z-index:1">
+        <div class="badges">
+          <span class="badge cyan">M.Tech dissertation</span>
+          <span class="badge amber">Paper under peer review, IJICS</span>
+        </div>
+        <h3>A Scalable Cross-Platform DFIR Framework for Automated Evidence Collection, Correlation and Cloud Forensic Investigation</h3>
+        <p>When a system is breached, investigators lose hours collecting logs and artifacts by hand from different machines. This framework automates collection across Windows, Linux and cloud environments, correlates the evidence into one timeline, and keeps a verifiable chain of custody.</p>
+        <p>The research paper passed initial screening at the International Journal of Information and Computer Security (Inderscience) and is now in peer review. Phase I is complete and the implementation is in progress.</p>
+        <a class="btn" href="https://github.com/jayveerv/cross-platform-dfir-framework" target="_blank" rel="noopener">View the repository</a>
+      </div>
+      <div style="position:relative;z-index:1">
+        <p class="pipe-title">How an investigation flows through it</p>
+        <ol class="pipeline">
+          <li><b>Collect</b><span>Pull logs, memory and disk artifacts from each platform</span></li>
+          <li><b>Preserve</b><span>Hash every item to keep the chain of custody intact</span></li>
+          <li><b>Correlate</b><span>Link events across machines and cloud accounts</span></li>
+          <li><b>Report</b><span>Produce a timeline an investigator can act on</span></li>
+        </ol>
+      </div>
+    </article>
+
+    <article class="small-case">
+      <div>
+        <div class="badges" style="margin-bottom:10px"><span class="badge green">Completed, Jul–Dec 2025</span></div>
+        <h3>AI-Based Cloud Intrusion Detection: a review study</h3>
+        <p>A survey of how machine learning and deep learning models detect intrusions in cloud environments, comparing datasets, detection accuracy and the gaps that still need work.</p>
+      </div>
+    </article>
+
+    <p class="coming">Next in the lab: an AI-powered SOC assistant that triages Wazuh alerts and maps them to MITRE ATT&amp;CK.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><h2>Experience &amp; education</h2></div>
+    <div class="cols">
+      <div>
+        <p class="col-title">Internships</p>
+        <ol class="tl">
+          <li>
+            <div class="when">Feb 2026 – Mar 2026</div>
+            <h3>Cyber Security Intern</h3>
+            <div class="org">SkillFied Mentor</div>
+          </li>
+          <li>
+            <div class="when">Dec 2024 – Feb 2025</div>
+            <h3>Web Development Intern</h3>
+            <div class="org">Arth Consultancy Services</div>
+            <p><button class="linkbtn" data-cert="arth-internship" data-title="Internship completion, Arth Consultancy Services">View completion certificate</button></p>
+          </li>
+          <li>
+            <div class="when">May 2024 – Jun 2024</div>
+            <h3>Summer Intern</h3>
+            <div class="org">byteXL</div>
+            <p>Data structures and algorithms with Python, and databases.</p>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <p class="col-title">Education</p>
+        <ol class="tl">
+          <li>
+            <div class="when">2025 – 2027</div>
+            <h3>M.Tech, Cyber Security</h3>
+            <div class="org">Parul Institute of Engineering &amp; Technology, Parul University</div>
+          </li>
+          <li>
+            <div class="when">2021 – 2025</div>
+            <h3>B.Tech, Computer Science &amp; Engineering</h3>
+            <div class="org">Parul University</div>
+          </li>
+          <li>
+            <div class="when">2019 – 2021</div>
+            <h3>Higher Secondary, Science (PCM)</h3>
+            <div class="org">RPTP School, Vidyanagar</div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill"><h3>Security operations</h3><ul class="chips"><li>SOC monitoring</li><li>Threat detection</li><li>Incident response</li><li>SIEM basics</li><li>Network security</li></ul></div>
+      <div class="skill"><h3>Forensics &amp; investigation</h3><ul class="chips"><li>Digital forensics (DFIR)</li><li>Evidence handling</li><li>Cloud forensics</li><li>OSINT</li></ul></div>
+      <div class="skill"><h3>Risk &amp; compliance</h3><ul class="chips"><li>Vulnerability assessment</li><li>Risk management</li><li>ISO 27001 (ISMS)</li></ul></div>
+      <div class="skill"><h3>Systems &amp; data</h3><ul class="chips"><li>Linux</li><li>SQL</li><li>Python</li><li>Data analysis</li><li>Excel</li></ul></div>
+      <div class="skill"><h3>AI &amp; automation</h3><ul class="chips"><li>Prompt engineering</li><li>AI tools</li><li>No-code automation</li></ul></div>
+      <div class="skill"><h3>Web development</h3><ul class="chips"><li>MERN stack</li><li>PHP &amp; MySQL</li><li>HTML, CSS, JavaScript</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Certifications</h2>
+      <p>Select any certificate to view it full size.</p>
+    </div>
+
+    <article class="featured">
+      <button class="thumb" data-cert="google-cybersecurity" data-title="Google Cybersecurity Professional Certificate" aria-label="View Google Cybersecurity Professional Certificate">
+        <img src="assets/certs/google-cybersecurity-thumb.jpg" alt="" loading="lazy">
+      </button>
+      <div>
+        <div class="badges"><span class="badge green">Completed Jan 2026</span></div>
+        <h3>Google Cybersecurity Professional Certificate</h3>
+        <p class="muted" style="margin:0">Eight courses covering security frameworks, networks, Linux and SQL, threat detection, incident response and Python automation. <a href="https://www.coursera.org/account/accomplishments/professional-cert/T3JVOMQOCSEB" target="_blank" rel="noopener">Verify on Coursera</a></p>
+        <ul class="courses">
+          <li>Foundations of Cybersecurity <a href="https://coursera.org/verify/TEWU3XIX5X83" target="_blank" rel="noopener">Verify</a></li>
+          <li>Play It Safe: Manage Security Risks <a href="https://coursera.org/verify/QLVSOUKJX8KL" target="_blank" rel="noopener">Verify</a></li>
+          <li>Networks and Network Security <a href="https://coursera.org/verify/V0FJPAFOA6U8" target="_blank" rel="noopener">Verify</a></li>
+          <li>Tools of the Trade: Linux and SQL <a href="https://coursera.org/verify/61BQ5ONII3NJ" target="_blank" rel="noopener">Verify</a></li>
+          <li>Assets, Threats, and Vulnerabilities <a href="https://coursera.org/verify/2FFWJN9OQQ20" target="_blank" rel="noopener">Verify</a></li>
+          <li>Sound the Alarm: Detection and Response <a href="https://coursera.org/verify/HVTKZKRQNA2C" target="_blank" rel="noopener">Verify</a></li>
+          <li>Automate Cybersecurity Tasks with Python <a href="https://coursera.org/verify/CZEZF8OG3UOQ" target="_blank" rel="noopener">Verify</a></li>
+          <li>Put It to Work: Prepare for Cybersecurity Jobs <a href="https://coursera.org/verify/GAMGOXREO6DX" target="_blank" rel="noopener">Verify</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="cert-grid" id="certgrid"></div>
+    <p class="cert-note">Also certified: HackerRank Python (Basic). <a href="https://www.hackerrank.com/certificates/1018c3f6b8" target="_blank" rel="noopener">Verify on HackerRank</a></p>
+  </div>
+</section>
+
+<section id="ctf">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Capture the flag</h2>
+      <p>Timed competitions where I solve hands-on challenges in web security, cryptography, forensics and OSINT.</p>
+    </div>
+    <div class="ctf" id="ctfgrid"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's work together</h2>
+    <p>I'm open to remote SOC, security analyst and digital forensics roles. Email is the fastest way to reach me.</p>
+    <a class="mail" href="mailto:jayveervasava0710@gmail.com">jayveervasava0710@gmail.com</a>
+    <div class="actions">
+      <a class="btn primary" href="mailto:jayveervasava0710@gmail.com">Send an email</a>
+      <a class="btn" href="https://www.linkedin.com/in/jayveer-vasava-93779038b/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn" href="https://github.com/jayveerv" target="_blank" rel="noopener">See my GitHub</a>
+      <a class="btn" href="assets/Jayveer_Vasava_Resume.pdf" download>Download resume</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Jayveer Vasava</span>
+    <span>Built by hand, hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<dialog id="viewer" aria-labelledby="viewer-title">
+  <div class="dlg-bar"><span id="viewer-title"></span><button id="viewer-close">Close</button></div>
+  <img id="viewer-img" alt="">
+</dialog>
+
+<script>
+// ---- certificate data ----
+const certs = [
+  {id:"hackerrank-sql-advanced", t:"SQL (Advanced)", o:"HackerRank, Jan 2026"},
+  {id:"hackerrank-sql-intermediate", t:"SQL (Intermediate)", o:"HackerRank, Jan 2026"},
+  {id:"hackerrank-sql-basic", t:"SQL (Basic)", o:"HackerRank, Nov 2025"},
+  {id:"digital-forensics-process", t:"Digital Forensic Investigation Process", o:"Forensics Digest, Nov 2025"},
+  {id:"osint-fundamentals", t:"OSINT Fundamentals", o:"CyberSisco, Feb 2026"},
+  {id:"ai-in-cybersecurity", t:"AI in Cybersecurity", o:"Netrinix Academy, Apr 2026"},
+  {id:"google-ai-job-search", t:"Accelerate Your Job Search with AI", o:"Google, Jan 2026"},
+  {id:"nptel-data-analytics", t:"Data Analytics with Python", o:"NPTEL, IIT Roorkee, Apr 2024"},
+  {id:"cisco-cpp", t:"Programming Essentials in C++", o:"Cisco Networking Academy, Feb 2023"},
+  {id:"skillfied-professional-exposure", t:"Career Development & Industry Orientation", o:"SkillFied Mentor, Feb 2026"}
+];
+const ctfs = [
+  {id:"ctf-cybertec8", t:"Cybertec8 CTF Battle 2026", o:"Cybertec8, Oct 2026"},
+  {id:"ctf-secleaf", t:"SecLeaf Q2 CTF 2026", o:"Team Catch Busters, May 2026"},
+  {id:"ctf-breach-havoc", t:"Breach Havoc CTF", o:"TryHackMe Parul University Chapter, Mar 2026"}
+];
+function card(c){
+  const b=document.createElement("button");
+  b.className="cert"; b.dataset.cert=c.id; b.dataset.title=c.t+", "+c.o;
+  b.setAttribute("aria-label","View certificate: "+c.t);
+  b.innerHTML=`<img src="assets/certs/${c.id}-thumb.jpg" alt="" loading="lazy"><div><b></b><span></span></div>`;
+  b.querySelector("b").textContent=c.t; b.querySelector("span").textContent=c.o;
+  return b;
+}
+certs.forEach(c=>document.getElementById("certgrid").appendChild(card(c)));
+ctfs.forEach(c=>document.getElementById("ctfgrid").appendChild(card(c)));
+
+// ---- viewer ----
+const dlg=document.getElementById("viewer"), vimg=document.getElementById("viewer-img"), vtitle=document.getElementById("viewer-title");
+document.addEventListener("click",e=>{
+  const el=e.target.closest("[data-cert]"); if(!el) return;
+  vimg.src="assets/certs/"+el.dataset.cert+".jpg"; vimg.alt=el.dataset.title; vtitle.textContent=el.dataset.title;
+  if(dlg.showModal) dlg.showModal(); else window.open(vimg.src,"_blank");
+});
+document.getElementById("viewer-close").onclick=()=>dlg.close();
+dlg.addEventListener("click",e=>{ if(e.target===dlg) dlg.close(); });
+
+// ---- mobile menu ----
+const mb=document.querySelector(".menu-btn"), nl=document.getElementById("navlinks");
+mb.onclick=()=>{const o=nl.classList.toggle("open"); mb.setAttribute("aria-expanded",o); mb.textContent=o?"Close":"Menu";};
+nl.addEventListener("click",e=>{ if(e.target.tagName==="A"){nl.classList.remove("open"); mb.setAttribute("aria-expanded",false); mb.textContent="Menu";}});
+
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+// ---- terminal ----
+const lines=[
+  ["cmd","whoami"],
+  ["out","jayveer vasava, cyber security"],
+  ["out",'<span class="c">m.tech @ parul university, 2025-2027</span>'],
+  ["cmd","cat focus.txt"],
+  ["out","soc monitoring\ndigital forensics (dfir)\nai security"],
+  ["cmd","./status --research"],
+  ["out",'dfir framework ....... <span class="wa">in development</span>\nijics paper .......... <span class="wa">under peer review</span>'],
+  ["cmd","./availability"],
+  ["out",'remote roles ......... <span class="ok">open</span>']
+];
+const term=document.getElementById("term");
+const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const prompt='<span class="p">$</span> ';
+function render(done){
+  return done.map(([k,v])=>k==="cmd"?prompt+v:v).join("\n");
+}
+if(reduce){
+  term.innerHTML=render(lines)+"\n"+prompt+'<span class="cursor"></span>';
+}else{
+  let i=0, html="";
+  const step=()=>{
+    if(i>=lines.length){ term.innerHTML=html+prompt+'<span class="cursor"></span>'; return; }
+    const [k,v]=lines[i];
+    if(k==="cmd"){
+      let n=0; const base=html+prompt;
+      const type=()=>{
+        n++; term.innerHTML=base+v.slice(0,n)+'<span class="cursor"></span>';
+        if(n<v.length) setTimeout(type,45+Math.random()*40);
+        else { html=base+v+"\n"; i++; setTimeout(step,260); }
+      };
+      setTimeout(type,350);
+    }else{
+      html+=v+"\n"; i++; term.innerHTML=html+'<span class="cursor"></span>'; setTimeout(step,180);
+    }
+  };
+  step();
+}
+</script>
+</body>
+</html>
