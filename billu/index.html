@@ -656,7 +656,7 @@ dialog input{width:100%;background:#120e17;border:1px solid var(--line);border-r
   /* ---------------- touch reactions ---------------- */
   let lastPet = 0, petStreak = 0;
   function guardAsleep() {
-    if (S.asleep) { talk(false); flash('s-shake', 700); mood('grumpy', 1500); setTimeout(() => { if (S.asleep) scene.dataset.mood = 'asleep'; }, 1500); showBubble(pick(L.wakeTap)); return true; }
+    if (S.asleep) { ++sayToken; clearTimeout(talkTimer); talk(false); flash('s-shake', 700); mood('grumpy', 1500); setTimeout(() => { if (S.asleep) scene.dataset.mood = 'asleep'; }, 1500); showBubble(pick(L.wakeTap)); return true; }
     if (hiding) { showBubble(pick(L.hiddenTap)); return true; }
     return false;
   }
