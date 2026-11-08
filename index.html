@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jayveer Vasava | Cyber Security</title>
-<meta name="description" content="Jayveer Vasava, M.Tech Cyber Security student at Parul University. SOC, digital forensics (DFIR) and AI security. Open to remote roles.">
-<meta property="og:title" content="Jayveer Vasava | Cyber Security">
-<meta property="og:description" content="SOC, digital forensics (DFIR) and AI security. M.Tech Cyber Security, Parul University. Open to remote roles.">
+<meta name="description" content="Jayveer Vasava, cyber security and digital forensics. Builder of CP-DFIR, RELIC-IDS and other security tools. SOC, DFIR and malware analysis. Open to roles.">
+<meta property="og:title" content="Jayveer Vasava | Cyber Security &amp; Digital Forensics">
+<meta property="og:description" content="Digital forensics, threat detection and security operations. 9 security projects, 7 live demos. Open to roles.">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://jayveerv.github.io/">
-<meta property="og:url" content="https://jayveerv.github.io/">
-<meta property="og:image" content="https://jayveerv.github.io/assets/og-card.png">
+<link rel="canonical" href="https://jayveervasava.in/">
+<meta property="og:url" content="https://jayveervasava.in/">
+<meta property="og:image" content="https://jayveervasava.in/assets/og-card.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jayveer Vasava | Cyber Security">
-<meta name="twitter:description" content="SOC, digital forensics (DFIR) and AI security. Open to remote roles.">
-<meta name="twitter:image" content="https://jayveerv.github.io/assets/og-card.png">
+<meta name="twitter:title" content="Jayveer Vasava | Cyber Security &amp; Digital Forensics">
+<meta name="twitter:description" content="Digital forensics, threat detection and security operations. Open to roles.">
+<meta name="twitter:image" content="https://jayveervasava.in/assets/og-card.png">
 <meta name="author" content="Jayveer Vasava">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Jayveer Vasava","url":"https://jayveerv.github.io/","image":"https://jayveerv.github.io/assets/photo.jpg","jobTitle":"Cyber Security Analyst","email":"mailto:jayveervasava0710@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Vadodara","addressRegion":"Gujarat","addressCountry":"IN"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Parul University"},"knowsAbout":["Security Operations","Digital Forensics","Incident Response","Network Security","AI Security","OSINT"],"sameAs":["https://www.linkedin.com/in/jayveervasava/","https://github.com/jayveerv"]}
+{"@context":"https://schema.org","@type":"Person","name":"Jayveer Vasava","url":"https://jayveervasava.in/","image":"https://jayveervasava.in/assets/photo.jpg","jobTitle":"Cyber Security Analyst","email":"mailto:jayveervasava0710@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Vadodara","addressRegion":"Gujarat","addressCountry":"IN"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Parul University"},"knowsAbout":["Digital Forensics","Incident Response","Security Operations","Network Security","Malware Analysis","OSINT"],"sameAs":["https://www.linkedin.com/in/jayveervasava/","https://github.com/jayveerv","https://tryhackme.com/p/jayveervasava","https://hashnode.com/@jayveervasava","https://rootjavs.in"]}
 </script>
 <meta name="theme-color" content="#0B1424">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1424'/%3E%3Cpath d='M32 10l18 7v13c0 12-8 21-18 24-10-3-18-12-18-24V17z' fill='none' stroke='%234FD1E8' stroke-width='4'/%3E%3Ctext x='32' y='40' font-family='monospace' font-size='18' font-weight='700' fill='%23E6ECF5' text-anchor='middle'%3EJV%3C/text%3E%3C/svg%3E">
@@ -179,9 +179,66 @@ h3{font-size:20px;line-height:1.3;margin:0 0 6px;font-weight:600;letter-spacing:
 .cert span{display:block;font-size:13.5px;color:var(--muted);margin-top:4px}
 .cert-note{margin-top:18px;font-size:15px;color:var(--muted)}
 
+.cert.extra{display:none}
+.cert-grid.all .cert.extra{display:flex}
+.more-wrap{margin-top:20px;display:flex;justify-content:center}
+.btn.ghost{background:transparent;cursor:pointer;font:inherit;font-size:15px}
+
 /* ctf */
-.ctf{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ctf{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .ctf .cert img{aspect-ratio:16/10}
+
+/* stats strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden}
+.stat{padding:20px 22px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font:600 30px/1.1 var(--mono);color:var(--text);letter-spacing:-.02em}
+.stat b em{font-style:normal;color:var(--signal)}
+.stat span{display:block;margin-top:6px;color:var(--muted);font-size:14.5px}
+
+/* research extras */
+.case .actions{margin-top:4px}
+.paper{margin-top:20px;border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 32px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center}
+.paper .ico{width:46px;height:46px;border-radius:12px;background:var(--amber-dim);border:1px solid rgba(245,184,65,.3);display:grid;place-items:center;color:var(--amber)}
+.paper .ico svg{width:22px;height:22px}
+.paper p{margin:4px 0 0;color:var(--muted);font-size:15.5px;max-width:70ch}
+
+/* projects */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.filters button{font:inherit;font-size:14.5px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 15px;cursor:pointer}
+.filters button:hover{color:var(--text);border-color:#33476B}
+.filters button[aria-pressed="true"]{color:#06202A;background:var(--signal);border-color:var(--signal);font-weight:500}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proj{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;transition:border-color .2s,transform .2s}
+.proj:hover{border-color:#33476B;transform:translateY(-2px)}
+.proj[hidden]{display:none}
+.shot{position:relative;aspect-ratio:16/10;background:#08101E;border-bottom:1px solid var(--line);overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.shot .where{position:absolute;left:12px;top:12px;font:500 12px var(--mono);color:var(--text);background:rgba(8,16,30,.86);border:1px solid var(--line);padding:3px 9px;border-radius:999px;backdrop-filter:blur(6px)}
+.proj-body{padding:20px 20px 18px;display:flex;flex-direction:column;flex:1}
+.proj h3{font-size:18px;margin-bottom:8px}
+.proj p{margin:0 0 14px;color:var(--muted);font-size:15px;flex:1}
+.proj p b{color:var(--text);font-weight:500}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px;padding:0;list-style:none}
+.tags li{font:400 12.5px var(--mono);padding:3px 8px;border-radius:6px;background:var(--surface-2);color:#B9C6DA}
+.proj-links{display:flex;gap:8px}
+.proj-links a{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:500;padding:8px 12px;border-radius:8px;border:1px solid var(--line);color:var(--text)}
+.proj-links a:hover{text-decoration:none;border-color:var(--signal)}
+.proj-links a.live{color:var(--green);border-color:rgba(91,214,154,.35);background:rgba(91,214,154,.08)}
+.proj-links a.live i{width:7px;height:7px;border-radius:50%;background:var(--green)}
+.proj-links svg{width:15px;height:15px}
+
+/* contact profiles */
+.profiles{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.profiles a{display:inline-flex;align-items:center;gap:9px;font-size:14.5px;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+.profiles a:hover{text-decoration:none;border-color:var(--signal)}
+.profiles svg{width:16px;height:16px;color:var(--signal)}
+.profiles-title{margin:40px 0 0;font-size:14px;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+
+/* gentle reveal */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
 
 /* contact */
 .contact{text-align:left;padding:96px 0 80px}
@@ -200,7 +257,8 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
 
 /* entrance: the terminal types itself; nothing else animates on load */
 @media (prefers-reduced-motion:reduce){
-  *{animation:none!important;scroll-behavior:auto!important}
+  *{animation:none!important;scroll-behavior:auto!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
 }
 
 /* responsive */
@@ -209,6 +267,13 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
   .hero .wrap{gap:40px}
   .skills{grid-template-columns:1fr 1fr}
   .cert-grid{grid-template-columns:repeat(3,1fr)}
+  .proj-grid{grid-template-columns:1fr 1fr}
+  .ctf{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .paper{grid-template-columns:auto 1fr}
+  .paper .btn{grid-column:1/-1;justify-self:start}
 }
 @media (max-width:760px){
   body{font-size:16px}
@@ -226,8 +291,12 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
   .small-case{padding:22px 24px}
   .featured{padding:22px}
   .courses{columns:1}
-  .skills,.ctf{grid-template-columns:1fr}
+  .skills,.ctf,.proj-grid{grid-template-columns:1fr}
   .cert-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .stat{padding:16px}
+  .stat b{font-size:24px}
+  .paper{padding:22px;grid-template-columns:1fr}
+  .paper .ico{display:none}
   .cert div{padding:12px}
   .cert b{font-size:14.5px}
 }
@@ -246,6 +315,7 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
     <ul id="navlinks">
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#certifications">Certifications</a></li>
@@ -260,10 +330,10 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
     <div>
       <div class="id">
         <img src="assets/photo.jpg" alt="Portrait of Jayveer Vasava" width="112" height="112">
-        <span class="avail"><i></i>Open to remote roles</span>
+        <span class="avail"><i></i>Open to roles</span>
       </div>
       <h1>Jayveer Vasava</h1>
-      <p class="lede">Cyber security engineer in training. I work on <strong>security operations</strong>, <strong>digital forensics</strong> and <strong>AI security</strong>, and I'm doing my M.Tech in Cyber Security at Parul University.</p>
+      <p class="lede">Cyber security engineer focused on <strong>digital forensics</strong>, <strong>threat detection</strong> and <strong>security operations</strong>. I build tools that collect evidence, catch attacks and analyse malware.</p>
       <div class="actions">
         <a class="btn primary" href="#contact">Get in touch</a>
         <a class="btn" href="assets/Jayveer_Vasava_Resume.pdf" download>
@@ -278,9 +348,17 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
       </div>
     </div>
 
-    <div class="term" role="img" aria-label="Terminal summary: Jayveer Vasava, cyber security. Focus: SOC monitoring, digital forensics, AI security. DFIR framework in development, research paper under peer review at IJICS. Open to remote roles.">
+    <div class="term" role="img" aria-label="Terminal summary: Jayveer Vasava, cyber security. Focus: digital forensics, threat detection, security operations. CP-DFIR framework version 1.3 is live. 9 security projects on GitHub, 7 with live demos. Open to roles.">
       <div class="term-bar"><span></span><span></span><span></span><b>jayveer@soc-lab: ~</b></div>
       <pre id="term" aria-hidden="true"></pre>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:48px">
+    <div class="stats">
+      <div class="stat"><b>9</b><span>Security &amp; software projects</span></div>
+      <div class="stat"><b>7</b><span>Live demos you can try</span></div>
+      <div class="stat"><b>4</b><span>CTF competitions</span></div>
+      <div class="stat"><b>20<em>+</em></b><span>Certificates &amp; trainings</span></div>
     </div>
   </div>
 </div>
@@ -290,14 +368,14 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
     <div>
       <h2 style="margin-bottom:24px">About me</h2>
       <p>I'm a cyber security student who likes finding out what actually happened. My M.Tech research is a forensics framework that collects evidence from Windows, Linux and cloud systems automatically, then connects the pieces into one investigation timeline.</p>
-      <p>Before cyber security I studied core computer science and interned as a web developer, so I understand how the systems I defend are built. I've completed the Google Cybersecurity Professional Certificate and compete in CTF events to keep my hands-on skills sharp.</p>
-      <p>I'm looking for remote roles as a SOC analyst, security analyst or digital forensics analyst, with teams in India or abroad.</p>
+      <p>Before cyber security I studied core computer science and interned as a web developer, so I understand how the systems I defend are built. Since then I've built tools for intrusion detection, malware analysis and SOC monitoring, completed the Google Cybersecurity Professional Certificate and compete in CTF events to keep my hands-on skills sharp.</p>
+      <p>I'm looking for roles in digital forensics, SOC and security analysis, with teams in India or abroad.</p>
     </div>
     <ul class="facts">
       <li><span>Based in</span><span>Vadodara, Gujarat, India</span></li>
       <li><span>Studying</span><span>M.Tech Cyber Security, 2025–2027</span></li>
-      <li><span>Looking for</span><span>SOC, Security &amp; DFIR analyst roles</span></li>
-      <li><span>Work mode</span><span>Remote</span></li>
+      <li><span>Looking for</span><span>DFIR, SOC &amp; security analyst roles</span></li>
+      <li><span>Work mode</span><span>Remote or on-site</span></li>
       <li><span>Languages</span><span>English, Hindi, Gujarati</span></li>
     </ul>
   </div>
@@ -306,20 +384,25 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
 <section id="research">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Research &amp; projects</h2>
-      <p>New lab projects are added here as I finish them, each with its code on GitHub.</p>
+      <h2>Research</h2>
+      <p>My M.Tech dissertation and the research study behind my intrusion detection work.</p>
     </div>
 
-    <article class="case">
+    <article class="case reveal">
       <div style="position:relative;z-index:1">
         <div class="badges">
           <span class="badge cyan">M.Tech dissertation</span>
-          <span class="badge amber">Paper under peer review, IJICS</span>
+          <span class="badge green">v1.3 · live console</span>
+          <span class="badge amber">Citable, Zenodo DOI</span>
         </div>
-        <h3>A Scalable Cross-Platform DFIR Framework for Automated Evidence Collection, Correlation and Cloud Forensic Investigation</h3>
-        <p>When a system is breached, investigators lose hours collecting logs and artifacts by hand from different machines. This framework automates collection across Windows, Linux and cloud environments, correlates the evidence into one timeline, and keeps a verifiable chain of custody.</p>
-        <p>The research paper passed initial screening at the International Journal of Information and Computer Security (Inderscience) and is now in peer review. Phase I is complete and the implementation is in progress.</p>
-        <a class="btn" href="https://github.com/jayveerv/cross-platform-dfir-framework" target="_blank" rel="noopener">View the repository</a>
+        <h3>CP-DFIR: A Scalable Cross-Platform DFIR Framework for Automated Evidence Collection, Correlation and Cloud Forensic Investigation</h3>
+        <p>When a system is breached, investigators lose hours collecting logs and artifacts by hand from different machines. CP-DFIR collects evidence from Windows, Linux and AWS automatically, converts it to one common schema and correlates it into a single attack timeline using <strong style="color:var(--text);font-weight:500">57 MITRE ATT&amp;CK-mapped rules</strong>.</p>
+        <p>Every step is written to a tamper-evident, HMAC-signed chain-of-custody ledger. In testing it <strong style="color:var(--text);font-weight:500">detected 25 out of 25</strong> simulated evidence-tampering attempts.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://cp-dfir-console.onrender.com/" target="_blank" rel="noopener">Open the live console</a>
+          <a class="btn" href="https://github.com/jayveerv/DFIR-Framework-WebApp" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://doi.org/10.5281/zenodo.23973650" target="_blank" rel="noopener">DOI</a>
+        </div>
       </div>
       <div style="position:relative;z-index:1">
         <p class="pipe-title">How an investigation flows through it</p>
@@ -332,15 +415,35 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
       </div>
     </article>
 
-    <article class="small-case">
+    <article class="paper reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div>
       <div>
-        <div class="badges" style="margin-bottom:10px"><span class="badge green">Completed, Jul–Dec 2025</span></div>
-        <h3>AI-Based Cloud Intrusion Detection: a review study</h3>
-        <p>A survey of how machine learning and deep learning models detect intrusions in cloud environments, comparing datasets, detection accuracy and the gaps that still need work.</p>
+        <div class="badges" style="margin-bottom:8px"><span class="badge green">Research paper · Jul–Dec 2025</span></div>
+        <h3>Beyond 99% Accuracy: A Critical Review and Re-evaluation of AI-Based Intrusion Detection for Cloud Environments</h3>
+        <p>Why intrusion detection models that score 99% on lab datasets fail on real networks, and how to test them honestly. The findings shaped the design of RELIC-IDS.</p>
       </div>
+      <a class="btn" href="https://github.com/jayveerv/relic-ids/blob/main/paper/Beyond_99_Accuracy_IEEE.pdf" target="_blank" rel="noopener">Read the paper</a>
     </article>
+  </div>
+</section>
 
-    <p class="coming">Next in the lab: an AI-powered SOC assistant that triages Wazuh alerts and maps them to MITRE ATT&amp;CK.</p>
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Projects</h2>
+      <p>Tools I've built and shipped, most with a live demo. Every project has its code on GitHub.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="forensics" aria-pressed="false">Forensics</button>
+      <button type="button" data-filter="network" aria-pressed="false">Network</button>
+      <button type="button" data-filter="malware" aria-pressed="false">Malware</button>
+      <button type="button" data-filter="soc" aria-pressed="false">SOC</button>
+      <button type="button" data-filter="web" aria-pressed="false">Web &amp; apps</button>
+    </div>
+
+    <div class="proj-grid" id="projgrid"></div>
   </div>
 </section>
 
@@ -355,11 +458,13 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
             <div class="when">Feb 2026 – Mar 2026</div>
             <h3>Cyber Security Intern</h3>
             <div class="org">SkillFied Mentor</div>
+            <p>Vulnerability assessment and OWASP Top 10 web testing. Built a <a href="https://github.com/jayveerv/packet-sniffer-arp-detect" target="_blank" rel="noopener">packet sniffer with ARP spoofing detection</a> and an <a href="https://github.com/jayveerv/basic-antivirus-simulation" target="_blank" rel="noopener">antivirus simulator</a>.</p>
           </li>
           <li>
             <div class="when">Dec 2024 – Feb 2025</div>
             <h3>Web Development Intern</h3>
             <div class="org">Arth Consultancy Services</div>
+            <p>Built PHP/MySQL web modules with secure login, CRUD operations, an admin dashboard and SQL injection prevention.</p>
             <p><button class="linkbtn" data-cert="arth-internship" data-title="Internship completion, Arth Consultancy Services">View completion certificate</button></p>
           </li>
           <li>
@@ -367,6 +472,7 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
             <h3>Summer Intern</h3>
             <div class="org">byteXL</div>
             <p>Data structures and algorithms with Python, and databases.</p>
+            <p><button class="linkbtn" data-cert="bytexl-internship" data-title="Summer Internship 2024, byteXL">View completion certificate</button></p>
           </li>
         </ol>
       </div>
@@ -398,12 +504,12 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
   <div class="wrap">
     <div class="sec-head"><h2>Skills</h2></div>
     <div class="skills">
-      <div class="skill"><h3>Security operations</h3><ul class="chips"><li>SOC monitoring</li><li>Threat detection</li><li>Incident response</li><li>SIEM basics</li><li>Network security</li></ul></div>
-      <div class="skill"><h3>Forensics &amp; investigation</h3><ul class="chips"><li>Digital forensics (DFIR)</li><li>Evidence handling</li><li>Cloud forensics</li><li>OSINT</li></ul></div>
-      <div class="skill"><h3>Risk &amp; compliance</h3><ul class="chips"><li>Vulnerability assessment</li><li>Risk management</li><li>ISO 27001 (ISMS)</li></ul></div>
-      <div class="skill"><h3>Systems &amp; data</h3><ul class="chips"><li>Linux</li><li>SQL</li><li>Python</li><li>Data analysis</li><li>Excel</li></ul></div>
-      <div class="skill"><h3>AI &amp; automation</h3><ul class="chips"><li>Prompt engineering</li><li>AI tools</li><li>No-code automation</li></ul></div>
-      <div class="skill"><h3>Web development</h3><ul class="chips"><li>MERN stack</li><li>PHP &amp; MySQL</li><li>HTML, CSS, JavaScript</li></ul></div>
+      <div class="skill"><h3>Forensics &amp; investigation</h3><ul class="chips"><li>Digital forensics (DFIR)</li><li>Evidence collection</li><li>Chain of custody</li><li>Timeline analysis</li><li>Cloud forensics (AWS)</li><li>OSINT</li></ul></div>
+      <div class="skill"><h3>Security operations</h3><ul class="chips"><li>SOC monitoring</li><li>Alert triage</li><li>Incident response</li><li>Threat detection</li><li>MITRE ATT&amp;CK</li><li>SIEM basics</li></ul></div>
+      <div class="skill"><h3>Network security</h3><ul class="chips"><li>Packet analysis (PCAP)</li><li>Scapy</li><li>Intrusion detection</li><li>ARP spoofing detection</li><li>OWASP Top 10</li><li>Vulnerability assessment</li></ul></div>
+      <div class="skill"><h3>Malware analysis</h3><ul class="chips"><li>Static analysis</li><li>YARA-style rules</li><li>Hashing &amp; entropy</li><li>PE inspection</li><li>IOC extraction</li></ul></div>
+      <div class="skill"><h3>Programming &amp; data</h3><ul class="chips"><li>Python</li><li>SQL / MySQL</li><li>JavaScript</li><li>Linux</li><li>Git &amp; GitHub</li><li>Data analysis</li></ul></div>
+      <div class="skill"><h3>Web &amp; platforms</h3><ul class="chips"><li>Node.js &amp; Express</li><li>Flask</li><li>PHP</li><li>React</li><li>SQLite</li><li>HTML, CSS</li></ul></div>
     </div>
   </div>
 </section>
@@ -437,7 +543,7 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
     </article>
 
     <div class="cert-grid" id="certgrid"></div>
-    <p class="cert-note">Also certified: HackerRank Python (Basic). <a href="https://www.hackerrank.com/certificates/1018c3f6b8" target="_blank" rel="noopener">Verify on HackerRank</a></p>
+    <div class="more-wrap"><button type="button" class="btn ghost" id="showall" aria-expanded="false" aria-controls="certgrid">Show all certificates</button></div>
   </div>
 </section>
 
@@ -454,13 +560,22 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
 <section class="contact" id="contact">
   <div class="wrap">
     <h2>Let's work together</h2>
-    <p>I'm open to remote SOC, security analyst and digital forensics roles. Email is the fastest way to reach me.</p>
+    <p>I'm open to digital forensics, SOC and security analyst roles, remote or on-site. Email is the fastest way to reach me.</p>
     <a class="mail" href="mailto:jayveervasava0710@gmail.com">jayveervasava0710@gmail.com</a>
     <div class="actions">
       <a class="btn primary" href="mailto:jayveervasava0710@gmail.com">Send an email</a>
       <a class="btn" href="https://www.linkedin.com/in/jayveervasava/" target="_blank" rel="noopener">Connect on LinkedIn</a>
       <a class="btn" href="https://github.com/jayveerv" target="_blank" rel="noopener">See my GitHub</a>
       <a class="btn" href="assets/Jayveer_Vasava_Resume.pdf" download>Download resume</a>
+    </div>
+    <p class="profiles-title">Find me on</p>
+    <div class="profiles">
+      <a href="https://tryhackme.com/p/jayveervasava" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l6-6-6-6M12 19h8"/></svg>TryHackMe</a>
+      <a href="https://app.hackthebox.com/users/2779024" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg>Hack The Box</a>
+      <a href="https://www.credly.com/users/jayveervasava" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 8 5-3 5 3-1.5-8"/></svg>Credly</a>
+      <a href="https://hashnode.com/@jayveervasava" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>Hashnode</a>
+      <a href="https://medium.com/@jayveervasava" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg>Medium</a>
+      <a href="https://rootjavs.in" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l9-4 9 4-9 4zM3 6v6l9 4 9-4V6M7 8v6"/></svg>rootjavs.in</a>
     </div>
   </div>
 </section>
@@ -469,7 +584,7 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> Jayveer Vasava</span>
-    <span>Built by hand, hosted on GitHub Pages</span>
+    <span>jayveervasava.in · hosted on GitHub Pages</span>
   </div>
 </footer>
 
@@ -479,34 +594,97 @@ dialog img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;background:#f
 </dialog>
 
 <script>
+// ---- projects ----
+const GH="https://github.com/jayveerv/";
+const projects = [
+  {img:"cp-dfir", where:"M.Tech dissertation", cat:["forensics"], t:"CP-DFIR: Cross-Platform DFIR Framework",
+   d:"Collects evidence from Windows, Linux and AWS and builds one attack timeline with <b>57 MITRE ATT&amp;CK rules</b>. Its signed chain-of-custody ledger caught <b>25/25</b> tampering attempts.",
+   tags:["Python","DFIR","AWS","MITRE ATT&CK"], live:"https://cp-dfir-console.onrender.com/", gh:GH+"DFIR-Framework-WebApp"},
+  {img:"relic-ids", where:"M.Tech research", cat:["network","soc"], t:"RELIC-IDS: Hybrid Intrusion Detection",
+   d:"Reads packet captures, flow files or live traffic and scores every flow with three detection layers, explains each alert and exports PDF incident reports.",
+   tags:["Python","PCAP","Machine learning","IDS"], live:"https://relic-ids.onrender.com", gh:GH+"relic-ids"},
+  {img:"vgil-soc", where:"M.Tech project", cat:["soc","web"], t:"VGIL: SOC Threat Monitoring Platform",
+   d:"A security operations platform with <b>45+ REST endpoints</b>, live alert streaming, an analyst triage dashboard and a detection engine that generates SOC telemetry.",
+   tags:["Node.js","Express","SQLite","SSE"], gh:GH+"vigil-soc"},
+  {img:"static-file-inspector", where:"M.Tech project", cat:["malware","forensics"], t:"Static File Inspector",
+   d:"Analyses a suspicious file without running it: hashes, true file type, entropy, PE structure, strings, IOC extraction and MITRE ATT&amp;CK leads.",
+   tags:["Malware analysis","JavaScript","Python"], live:"https://jayveervasava.in/static-file-inspector/", gh:GH+"static-file-inspector"},
+  {img:"packet-sniffer", where:"SkillFied internship", cat:["network"], t:"Packet Sniffer + ARP Spoofing Detector",
+   d:"Decodes network traffic and detects man-in-the-middle ARP spoofing (MITRE T1557.002), with a Flask dashboard and PCAP, JSON, CSV and HTML exports.",
+   tags:["Python","Scapy","Flask"], live:"https://packet-sniffer-arp-detector.onrender.com", gh:GH+"packet-sniffer-arp-detect"},
+  {img:"antivirus", where:"SkillFied internship", cat:["malware"], t:"Basic Antivirus Simulation",
+   d:"Combines signature matching, YARA-style rules mapped to MITRE ATT&amp;CK and heuristics into one explainable 0–100 risk score, with quarantine and live folder monitoring.",
+   tags:["Python","YARA","Flask"], live:"https://basic-antivirus-simulation.onrender.com", gh:GH+"basic-antivirus-simulation"},
+  {img:"career-guidance", where:"B.Tech minor project", cat:["web"], t:"AI Career Guidance Tool",
+   d:"Students answer an 18-question interest quiz and get their top 5 matching careers with a roadmap, entrance exams and salary range. Built in a team of three.",
+   tags:["Python","Streamlit","scikit-learn"], live:"https://ai-career-guidance-tool-z69smste3d9upcvsmjrlwv.streamlit.app", gh:GH+"ai-career-guidance-tool"},
+  {img:"daansetu", where:"B.Tech project", cat:["web"], t:"DaanSetu: Blockchain Crowdfunding",
+   d:"Donations are held in a smart-contract escrow and released milestone by milestone, only when donors don't object. Missed goals are refunded automatically.",
+   tags:["Solidity","React","ethers.js"], gh:GH+"daansetu"},
+  {img:"rootjavs", where:"Founder", cat:["web"], t:"rootjavs: Learn by Doing",
+   d:"A learning platform I run, taking learners from computer basics to cyber security with notes, in-browser labs, timed exams and verifiable certificates.",
+   tags:["HTML","CSS","JavaScript"], live:"https://rootjavs.in", liveLabel:"Visit site", gh:GH+"rootjavs"}
+];
+const ghIcon='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>';
+const pg=document.getElementById("projgrid");
+projects.forEach(p=>{
+  const a=document.createElement("article");
+  a.className="proj reveal"; a.dataset.cat=p.cat.join(" ");
+  a.innerHTML=`<div class="shot"><img src="assets/projects/${p.img}.jpg" alt="Screenshot of ${p.t.split(":")[0]}" loading="lazy" width="800" height="500"><span class="where">${p.where}</span></div>
+  <div class="proj-body"><h3>${p.t}</h3><p>${p.d}</p>
+  <ul class="tags">${p.tags.map(x=>`<li>${x.replace(/&/g,"&amp;")}</li>`).join("")}</ul>
+  <div class="proj-links">${p.live?`<a class="live" href="${p.live}" target="_blank" rel="noopener"><i></i>${p.liveLabel||"Live demo"}</a>`:""}<a href="${p.gh}" target="_blank" rel="noopener">${ghIcon}Code</a></div></div>`;
+  pg.appendChild(a);
+});
+document.querySelectorAll(".filters button").forEach(btn=>btn.addEventListener("click",()=>{
+  const f=btn.dataset.filter;
+  document.querySelectorAll(".filters button").forEach(b=>b.setAttribute("aria-pressed",b===btn));
+  pg.querySelectorAll(".proj").forEach(el=>{el.hidden=!(f==="all"||el.dataset.cat.split(" ").includes(f)); if(!el.hidden) el.classList.add("in");});
+}));
+
 // ---- certificate data ----
 const certs = [
-  {id:"hackerrank-sql-advanced", t:"SQL (Advanced)", o:"HackerRank, Jan 2026"},
-  {id:"hackerrank-sql-intermediate", t:"SQL (Intermediate)", o:"HackerRank, Jan 2026"},
-  {id:"hackerrank-sql-basic", t:"SQL (Basic)", o:"HackerRank, Nov 2025"},
   {id:"digital-forensics-process", t:"Digital Forensic Investigation Process", o:"Forensics Digest, Nov 2025"},
   {id:"osint-fundamentals", t:"OSINT Fundamentals", o:"CyberSisco, Feb 2026"},
   {id:"ai-in-cybersecurity", t:"AI in Cybersecurity", o:"Netrinix Academy, Apr 2026"},
-  {id:"google-ai-job-search", t:"Accelerate Your Job Search with AI", o:"Google, Jan 2026"},
+  {id:"hackerrank-sql-advanced", t:"SQL (Advanced)", o:"HackerRank, Jan 2026"},
+  {id:"hackerrank-python-basic", t:"Python (Basic)", o:"HackerRank", url:"https://www.hackerrank.com/certificates/1018c3f6b8"},
   {id:"nptel-data-analytics", t:"Data Analytics with Python", o:"NPTEL, IIT Roorkee, Apr 2024"},
-  {id:"cisco-cpp", t:"Programming Essentials in C++", o:"Cisco Networking Academy, Feb 2023"},
-  {id:"skillfied-professional-exposure", t:"Career Development & Industry Orientation", o:"SkillFied Mentor, Feb 2026"}
+  {id:"skillfied-professional-exposure", t:"Career Development & Industry Orientation", o:"SkillFied Mentor, Feb 2026"},
+  {id:"google-ai-job-search", t:"Accelerate Your Job Search with AI", o:"Google, Jan 2026"},
+  {id:"hackerrank-sql-intermediate", t:"SQL (Intermediate)", o:"HackerRank, Jan 2026"},
+  {id:"hackerrank-sql-basic", t:"SQL (Basic)", o:"HackerRank, Nov 2025"},
+  {id:"cisco-cpp", t:"Programming Essentials in C++", o:"Cisco Networking Academy, Feb 2023"}
 ];
+const SHOWN=8;
 const ctfs = [
   {id:"ctf-cybertec8", t:"Cybertec8 CTF Battle 2026", o:"Cybertec8, Oct 2026"},
+  {id:"ctf-cybertec8-mini", t:"Mini CTF Challenge 2026", o:"Cybertec8, Jul 2026"},
   {id:"ctf-secleaf", t:"SecLeaf Q2 CTF 2026", o:"Team Catch Busters, May 2026"},
   {id:"ctf-breach-havoc", t:"Breach Havoc CTF", o:"TryHackMe Parul University Chapter, Mar 2026"}
 ];
-function card(c){
+function card(c,extra){
   const b=document.createElement("button");
-  b.className="cert"; b.dataset.cert=c.id; b.dataset.title=c.t+", "+c.o;
+  b.className="cert"+(extra?" extra":""); b.dataset.cert=c.id; b.dataset.title=c.t+", "+c.o;
   b.setAttribute("aria-label","View certificate: "+c.t);
   b.innerHTML=`<img src="assets/certs/${c.id}-thumb.jpg" alt="" loading="lazy"><div><b></b><span></span></div>`;
   b.querySelector("b").textContent=c.t; b.querySelector("span").textContent=c.o;
   return b;
 }
-certs.forEach(c=>document.getElementById("certgrid").appendChild(card(c)));
+const cg=document.getElementById("certgrid");
+certs.forEach((c,i)=>cg.appendChild(card(c,i>=SHOWN)));
 ctfs.forEach(c=>document.getElementById("ctfgrid").appendChild(card(c)));
+const sa=document.getElementById("showall");
+const hiddenCount=certs.length-SHOWN;
+sa.textContent=`Show all certificates (+${hiddenCount})`;
+sa.onclick=()=>{const o=cg.classList.toggle("all"); sa.setAttribute("aria-expanded",o); sa.textContent=o?"Show fewer":`Show all certificates (+${hiddenCount})`;};
+
+// ---- gentle reveal on scroll ----
+document.querySelectorAll(".sec-head,.skill,.featured,.cols > div,.ctf,.contact .wrap").forEach(el=>el.classList.add("reveal"));
+if("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{rootMargin:"0px 0px -8% 0px"});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+}else{document.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));}
 
 // ---- viewer ----
 const dlg=document.getElementById("viewer"), vimg=document.getElementById("viewer-img"), vtitle=document.getElementById("viewer-title");
@@ -531,11 +709,11 @@ const lines=[
   ["out","jayveer vasava, cyber security"],
   ["out",'<span class="c">m.tech @ parul university, 2025-2027</span>'],
   ["cmd","cat focus.txt"],
-  ["out","soc monitoring\ndigital forensics (dfir)\nai security"],
-  ["cmd","./status --research"],
-  ["out",'dfir framework ....... <span class="wa">in development</span>\nijics paper .......... <span class="wa">under peer review</span>'],
+  ["out","digital forensics (dfir)\nthreat detection\nsecurity operations"],
+  ["cmd","./status --projects"],
+  ["out",'cp-dfir v1.3 ......... <span class="ok">live</span>\nprojects ............. <span class="wa">9 built, 7 live</span>'],
   ["cmd","./availability"],
-  ["out",'remote roles ......... <span class="ok">open</span>']
+  ["out",'new roles ............ <span class="ok">open</span>']
 ];
 const term=document.getElementById("term");
 const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;

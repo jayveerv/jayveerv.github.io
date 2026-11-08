@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://jayveerv.github.io/sitemap.xml
+Sitemap: https://jayveervasava.in/sitemap.xml
